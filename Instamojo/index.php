@@ -41,7 +41,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     
     $ch = curl_init();
     
-    curl_setopt($ch, CURLOPT_URL, 'https://test.instamojo.com/api/1.1/payment-requests/');
+    curl_setopt($ch, CURLOPT_URL, 'https://'.$mode.'.instamojo.com/api/1.1/payment-requests/');
     curl_setopt($ch, CURLOPT_HEADER, FALSE);
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
     curl_setopt($ch, CURLOPT_FOLLOWLOCATION, TRUE);
@@ -76,7 +76,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
        $payment_id = $data['payment_request']['id'];
        echo '<script src="https://js.instamojo.com/v1/checkout.js"></script>
         <script>
-            Instamojo.open("https://test.instamojo.com/@rahul13gangotri/'.$payment_id.'"); 
+            Instamojo.open("https://'.$mode.'.instamojo.com/@rahul13gangotri/'.$payment_id.'"); 
         </script>
         ';
            //and for redirect to payment page, use this and uncomment the header() below.
