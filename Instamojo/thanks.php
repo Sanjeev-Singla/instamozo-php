@@ -30,11 +30,7 @@
     $payid = $_GET["payment_request_id"];
     $response = $api->paymentRequestStatus($payid);
     
-    $email = $response['email'];
-    $sql = "SELECT id FROM users where email = '$email'";
-    $result = $conn->query($sql);
-    $row = $result->fetch_assoc();
-    $user_id = $row['id'];
+    $user_id = '1';
     $package =  $response['purpose'];
     $quantity = $response['payments'][0]['quantity'];
     $currency = $response['payments'][0]['currency'];
