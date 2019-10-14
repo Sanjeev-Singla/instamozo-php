@@ -13,7 +13,7 @@ Step to implement the Instamojo Payment Gateway for "Testing" and "Live" make su
 7. After creating the database, you just need to make connection with database base in "thanks.php" file to save the data in database.You    need to put the details of database to make connection.
 8. All following the all above Points then run that after putting the all details then press do payment, fill the details of card like:-
 
-a.CARD NUMBER: 4242 4242 4242 4242
-b.EXPIRE DATE: 01/20
-c.CVV: 111
-d.OTP: 1221
+CARD NUMBER: 4242 4242 4242 4242  
+EXPIRE DATE: 01/20  
+CVV: 111  
+OTP: 1221
