@@ -14,9 +14,9 @@
     include 'src/instamojo.php';
     
     $servername = "localhost";
-    $username = "agpomufm_google";
-    $password = "Codesoftic@08";
-    $dbname = "agpomufm_google";
+    $username = "db_username";
+    $password = "db_password";
+    $dbname = "db_name";
     // Create connection
     $conn = new mysqli($servername, $username, $password, $dbname);
     // Check connection
@@ -26,7 +26,7 @@
 
 
   
-    $api = new Instamojo\Instamojo($api_key, $api_secret,'https://test.instamojo.com/api/1.1/');
+    $api = new Instamojo\Instamojo($api_key, $api_secret,'https://'.mode.'.instamojo.com/api/1.1/');
     $payid = $_GET["payment_request_id"];
     $response = $api->paymentRequestStatus($payid);
     
